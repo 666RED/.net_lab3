@@ -1,0 +1,79 @@
+﻿.content-container {
+    width: 30%;
+    margin: auto;
+    height: 470px;
+}
+
+.user-img {
+    display: block;
+    margin: auto;
+    height: 100px;
+    width: 100px;
+}
+
+.login-title {
+    font-size: 16px;
+    text-align: center;
+}
+
+.login-description {
+    margin-top: 30px;
+    display: block;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.input-field {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-input {
+    width: 60%;
+}
+
+.user-label {
+    font-size: 16px;
+}
+
+.btn-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    margin-top: 15px;
+    padding: 7px 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(34, 27, 27);
+    color: white;
+    transition: .2s;
+}
+
+    .btn:hover {
+        background-color: gray;
+        color: rgb(34, 27, 27);
+    }
+
+.status-label {
+    display: block;
+    text-align: center;
+    color: red;
+    font-size: 16px;
+}
+
+.id-checker,
+.password-checker,
+.compare-checker {
+    display: block;
+    text-align: center;
+}

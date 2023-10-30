@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.Master.cs" Inherits="Lab3.MasterPages.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+        <link href="../Styles/styles.css" rel="stylesheet" type="text/css" runat="server"/>
+        <link href="../Styles/login.css" rel="stylesheet" type="text/css" runat="server"/>
+        <link href="../Styles/contact.css" rel="stylesheet" type="text/css" runat="server"/>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="wrapper">
+            <div class="menu">
+                <ul>
+                    <li><a href="Login.aspx">Login</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="ContactUs.aspx">Contact Us</a></li>
+                    <li><a href="#">Class</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="Default.aspx">Home</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="content">
+            <div>
+                <asp:ContentPlaceHolder ID="bodycontent" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="footer">
+            <h2>Copyright@BIE33103 1-2023/2024</h2>
+        </div>
+    </form>
+</body>
+</html>

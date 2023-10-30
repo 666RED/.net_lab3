@@ -1,0 +1,45 @@
+﻿.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 400px;
+    margin: 45px 0;
+}
+
+.sub-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(105, 202, 211);
+    height: 100%;
+    padding: 0 10px;
+    max-width: 350px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.call-img {
+    width: 100px;
+    height: 100px;
+}
+
+.title {
+    font-size: 20px;
+}
+
+.description {
+    word-break: break-word;
+    font-size: 14px;
+}
+
+.phone-number {
+    font-size: 14px;
+    cursor: pointer;
+    color: rgb(12, 24, 214);
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
