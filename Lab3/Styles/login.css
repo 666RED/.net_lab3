@@ -59,10 +59,10 @@
     transition: .2s;
 }
 
-    .btn:hover {
-        background-color: gray;
-        color: rgb(34, 27, 27);
-    }
+.btn:hover {
+    background-color: gray;
+    color: rgb(34, 27, 27);
+}
 
 .status-label {
     display: block;

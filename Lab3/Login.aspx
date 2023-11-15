@@ -13,7 +13,7 @@
         <asp:RequiredFieldValidator ID="rvfID" runat="server" ControlToValidate="IDTextBox" ErrorMessage="Please enter your ID!" ForeColor="Red" CssClass="id-checker"></asp:RequiredFieldValidator>
         <div class="input-field">
             <asp:Label ID="Label4" runat="server" Text="Password:" CssClass="user-label" AssociatedControlID="PasswordTextBox"></asp:Label>
-            <asp:TextBox ID="PasswordTextBox" runat="server" CssClass="user-input"></asp:TextBox>
+            <asp:TextBox ID="PasswordTextBox" runat="server" CssClass="user-input" TextMode="Password"></asp:TextBox>
         </div>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="PasswordTextBox" ErrorMessage="Please enter your Password!" ForeColor="Red" CssClass="password-checker"></asp:RequiredFieldValidator>
         <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="IDTextBox" ControlToValidate="PasswordTextBox" ErrorMessage="Password cannot be the same as ID" Operator="NotEqual" Type="String" CssClass="compare-checker" ForeColor="Red"></asp:CompareValidator>

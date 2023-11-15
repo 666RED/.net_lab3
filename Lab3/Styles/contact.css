@@ -1,45 +1,57 @@
-﻿.container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 400px;
-    margin: 45px 0;
-}
-
-.sub-container {
+﻿.sub-container {
+    width: 60%;
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    background-color: rgb(105, 202, 211);
-    height: 100%;
-    padding: 0 10px;
-    max-width: 350px;
-    text-align: center;
-    border-radius: 15px;
 }
 
-.call-img {
-    width: 100px;
-    height: 100px;
-}
-
-.title {
+.page-title {
     font-size: 20px;
 }
 
-.description {
-    word-break: break-word;
-    font-size: 14px;
+.page-description {
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
-.phone-number {
-    font-size: 14px;
+.field-container {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 5px;
+}
+
+.field-label {
+    font-weight: bold;
+    text-align: left;
+    font-size: 16px;
+}
+
+.comment-textarea {
+    height: 100px;
+    resize: none;
+}
+
+.textbox {
+    width: 60%;
+}
+
+.button-row {
+    margin-top: 20px;
+}
+
+.contact-btn {
+    margin-left: 5px;
+    border-radius: 2px;
     cursor: pointer;
-    color: rgb(12, 24, 214);
 }
 
-.link {
-    text-decoration: none;
-    color: black;
+.contact-btn:hover {
+    opacity: .5;
+}
+
+.info {
+    margin-block: 15px;
 }
