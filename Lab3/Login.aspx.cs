@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Lab3
 {
@@ -15,17 +19,35 @@ namespace Lab3
         }
         protected void SubmitButton_Click(object sender, EventArgs e)
         {
+            string conString = "Data Source =.\\SQLEXPRESS; Initial Catalog = TestDatabase; Integrated Security = True; Pooling = False";
+
+            SqlConnection con;
+            SqlCommand command;
+            SqlDataReader reader;
+
+            con = new SqlConnection(conString);
+            command = con.CreateCommand();
+            command.CommandType = CommandType.Text;
+
             string id = IDTextBox.Text;
             string password = PasswordTextBox.Text;
 
-            if (id.Equals("admin") && password.Equals("hello world")) 
+            command.CommandText = "SELECT id, password FROM Login";
+            using(con) // no need to worry about garbage collector (auto close the connection)
             {
-                Response.Redirect("default.aspx");
+                con.Open();
+                reader = command.ExecuteReader();
+
+                while(reader.Read())
+                {
+                    if (id.Equals(reader.GetString(0)) && password.Equals(reader.GetString(1)))
+                    {
+                        Response.Redirect("default.aspx");
+                    }
+                }
             }
-            else
-            {
-                StatusLabel.Text = "Login unsuccessful!";
-            }
+
+            StatusLabel.Text = "Login unsuccessful!";
         }
 
         protected void CancelButton_Click(object sender, EventArgs e)

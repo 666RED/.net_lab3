@@ -1,5 +1,18 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/MasterPage.Master" AutoEventWireup="true" CodeBehind="ContactUs.aspx.cs" Inherits="Lab3.ContactUs" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script language="javascript">
+        const funCheck = () => {
+            const textboxes = document.getElementsByClassName("textbox");
+            for (let i = 0; i < textboxes.length; i++) {
+                if (textboxes[i].value == "") {
+                    return;
+                }
+            }
+            const flag = confirm("Do you want to proceed?");
+            const hiddenField = document.getElementById('<%= HiddenField1.ClientID%>');
+            hiddenField.value = flag ? '1' : '0';
+        }
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="bodycontent" runat="server">
     <div class="sub-container" runat="server">
@@ -21,10 +34,10 @@
         </div>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="CommentTextbox" ErrorMessage="Please enter your comment!" ForeColor="Red"></asp:RequiredFieldValidator>
         <div runat="server" class="button-row">
-            <asp:Button ID="SubmitButton" runat="server" Text="Submit" CssClass="contact-btn" OnClick="SubmitButton_Click"/>
+            <asp:Button ID="SubmitButton" runat="server" Text="Submit" CssClass="contact-btn" OnClick="SubmitButton_Click" OnClientClick="funCheck()"/>
             <asp:Button ID="CancelButton" runat="server" Text="Cancel" CssClass="contact-btn" OnClick="CancelButton_Click"/>
         </div>
         <asp:Label ID="StatusLabel" runat="server" CssClass="info"></asp:Label>
-
+        <asp:HiddenField ID="HiddenField1" runat="server"/>
     </div>
 </asp:Content>
