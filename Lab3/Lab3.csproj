@@ -44,6 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -73,6 +74,7 @@
     <Content Include="Images\call.png" />
     <Content Include="Images\chat.png" />
     <Content Include="Login.aspx" />
+    <Content Include="MasterPages\Graph.aspx" />
     <Content Include="Styles\contact.css" />
     <Content Include="Styles\login.css" />
     <Content Include="Styles\styles.css" />
@@ -106,6 +108,13 @@
     </Compile>
     <Compile Include="MasterPages\MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\Graph.aspx.cs">
+      <DependentUpon>Graph.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\Graph.aspx.designer.cs">
+      <DependentUpon>Graph.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

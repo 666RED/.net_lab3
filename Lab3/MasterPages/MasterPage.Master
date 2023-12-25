@@ -19,8 +19,8 @@
                     <li><a href="Login.aspx">Login</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="ContactUs.aspx">Contact Us</a></li>
-                    <li><a href="#">Class</a></li>
-                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Graph Exercises</a></li>
+                    <li><a href="#">Lecture Notes</a></li>
                     <li><a href="Default.aspx">Home</a></li>
                 </ul>
             </div>
